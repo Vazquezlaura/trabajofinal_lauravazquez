@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10;
+    padding: 10;
+    background-image: url(./Imagenes/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+button {
+    border: 0;
+    background-image: linear-gradient(150deg,
+            #3b0852 #9561af #959595);
+    border-radius: 8px;
+    color: #3b0852;
+    display: flex;
+    font-size: 10px;
+    padding: 4px;
+    cursor: pointer;
+    transition: 3s;
+}
+
+button span {
+    background-color: #290457;
+    padding: 12px 18px;
+    border-radius: 3px;
+    transition: 3s;
+}
+
+.contenedor {
+    background-color: #5335e790;
+    padding: 5px;
+    display: inline-block;
+}
+
+h1 {
+    color: rgb(170, 129, 209);
+    text-align: center;
+    font-family: arial;
+    font-size: 120px
+}
+
+
+h2 {
+    color: rgb(2, 2, 21);
+    font-family: monospace;
+    font-size: 50px;
+}
+
+h3 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+header.abajo {
+    background-color: #290457;
+    padding: 10px;
+}
+/*es el diseño utilizado para el momento en que baje hasta la parte de abajo el menu cambie de color*/
+/*esto todo es el estilo del menu*/
+header {
+    background-color: #06032c8e;
+    color: #0e0d0d;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2000px;
+    display: flex;
+    justify-self: space-around;
+    align-items: end;
+    transition: 0.7s;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 50px;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: #978ba6;
+}
+
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu {
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: rgb(116, 41, 128);
+}
+#check {
+    display: none;
+}
+
+/* En html lo puse estilo lista pero en el css con el display lo puse en una sola linea, hice lo mismo en todos los css*/
+
+img {
+    border: #290457;
+    margin: 150px;
+    width: 850px;
+    height: 700px;
+}
+
+p {
+    color: #bcbdbf;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    line-height: 2em;
+}
+
+.d-item {
+    height: 500px;
+}
+.d-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+#Saber {
+    background-color: #29045773;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form {
+    background-color: rgba(102, 51, 153, 0.474);
+    width: auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000;
+    font-size: 27px;
+    grid-auto-columns: 100%;
+}
+
+legend {
+    color: #180133;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+textarea {
+    resize: none;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+form button {
+    background-color: #9561af;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: #000;
+    border: #9561af;
+    padding: 5px;
+    margin: 8px;
+}
+
+footer {
+    text-align: center;
+    background-color: #290457;
+    color: #bfd5ec;
+    padding: 20px;
+}
+
+@media(max-width:750px){
+    body {
+        background-color: #9561af7b;
+    }
+    h1 {
+        color: #000;
+    font-size: 50px; }
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+.menu {
+    position: fixed;
+    width: 20%;
+    height:100vh;
+    background: #230852e8;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px;
+    z-index: 100;
+    transition: 0.8s;
+}
+.menu a {
+    display: block;
+    padding: 20px;
+}
+ul {
+    flex-direction: column;
+}
+.esconder-menu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#check:checked ~ .menu{
+    right: 0;
+}
+}
